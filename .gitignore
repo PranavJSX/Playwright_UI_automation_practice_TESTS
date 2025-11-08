@@ -6,3 +6,4 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /Old_node_modules
+/.github
