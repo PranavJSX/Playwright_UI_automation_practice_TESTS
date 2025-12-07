@@ -6,7 +6,7 @@ require('dotenv').config();
 let adminEmail = process.env.ADMIN_USERNAME||'';
 let adminPassword = process.env.ADMIN_PASSWORD||'';
 
-test.only('Succesfull Login',async({page})=>{
+test('Succesfull Login',async({page})=>{
     const pages =  new PageFactor(page);
     await pages.getLoginPage().navigate_to_page();
     await pages.getLoginPage().login(adminEmail,adminPassword);
