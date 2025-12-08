@@ -34,7 +34,7 @@ jobs:
       - name: Upload Monocart Report Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: monocart-report # MUST contain index.html
+          path: ./monocart-report # MUST contain index.html
 
   deploy:
     runs-on: ubuntu-latest
