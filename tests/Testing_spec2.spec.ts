@@ -1,5 +1,5 @@
 // import { chromium } from 'playwright';
-import {test,expect} from '../fixtures/navigation_fixture';
+import {test,expect} from '../fixtures/Master';
 
 test('Radio button test',async({nav_page})=>{
     await nav_page.locator('//a[text()="Radio Buttons"]').click();
@@ -61,4 +61,11 @@ test('Dialogs',async({page})=>{
     await page.on('dialog',async(el)=>{
         await el.accept('Pranav');
     })
+});
+
+
+
+test('Checking all network requests are PASSING ON THE HOME PAGE',async({page})=>{
+    await page.goto('/');
+    expect(await page.url()).toBe('https://practice.expandtesting.com/');
 });
